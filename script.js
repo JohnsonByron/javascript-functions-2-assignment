@@ -3,10 +3,11 @@
 // - Takes this array of books and a genre (as a string) as parameters
 // - Then uses the .filter() method to return a filtered array of books containing that genre.
 
-//Write filterByGenre(books, genre) below here:
+function filterByGenre(books, genre) {
+  return books.filter(book => book.genre.toLowerCase() === genre.toLowerCase());
+}
 
-
-const books = [
+  const books = [
   {
     title: "The Da Vinci Code",
     author: "Dan Brown",
@@ -63,5 +64,8 @@ const books = [
     genre: "romance",
   },
 ];
+
+const filteredBooks = filterByGenre(books, 'mystery');
+console.log(filteredBooks);
 
 
